@@ -46,7 +46,7 @@ const categories = [
     label: 'Herramientas',
     color: 'text-cyan-400',
     bg: 'bg-cyan-500/10',
-    items: ['Git/GitHub', 'LangGraph', 'Groq API', 'Anthropic SDK', 'BI'],
+    items: ['Git/GitHub', 'LangGraph', 'Groq API', 'Anthropic SDK', 'BI', 'OpenCode', 'Ollama', 'GitHub Copilot', 'Codex'],
   },
 ]
 
