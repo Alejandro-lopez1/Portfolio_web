@@ -5,6 +5,7 @@ import {
   Database,
   Container,
   Wrench,
+  BarChart3,
 } from 'lucide-react'
 
 const categories = [
@@ -47,6 +48,14 @@ const categories = [
     color: 'text-cyan-400',
     bg: 'bg-cyan-500/10',
     items: ['Git/GitHub', 'LangGraph', 'Groq API', 'Anthropic SDK', 'BI', 'OpenCode', 'Ollama', 'GitHub Copilot', 'Codex'],
+  },
+  {
+    id: 'analysis',
+    icon: BarChart3,
+    label: 'Análisis',
+    color: 'text-rose-400',
+    bg: 'bg-rose-500/10',
+    items: ['Trello', 'Jira (basic)', 'Obsidian', 'Draw.io', 'Lucidchart', 'PostgreSQL', 'DBeaver', 'phpMyAdmin', 'Postman (basic)'],
   },
 ]
 

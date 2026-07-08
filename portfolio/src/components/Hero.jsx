@@ -29,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-violet-400 font-medium text-sm sm:text-base mb-4 tracking-wider uppercase">
-            Desarrollador Fullstack & Analista de Sistemas
+            Estudiante · Analista de Datos · Analista de Sistemas · Desarrollador Fullstack
           </p>
         </motion.div>
 
