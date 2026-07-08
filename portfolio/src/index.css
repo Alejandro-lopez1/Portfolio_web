@@ -10,6 +10,15 @@ body {
   @apply bg-[#0a0a0a] text-gray-300 antialiased;
 }
 
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: theme('fontFamily.heading');
+  }
+  code, pre, kbd, samp {
+    font-family: theme('fontFamily.mono');
+  }
+}
+
 ::selection {
   @apply bg-violet-600/30 text-white;
 }

@@ -8,7 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Roboto', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['Oswald', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
         'gradient': 'gradient 8s ease infinite',
