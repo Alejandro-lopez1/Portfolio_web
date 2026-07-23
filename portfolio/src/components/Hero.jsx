@@ -30,11 +30,11 @@ export default function Hero() {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="shrink-0"
               >
-                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-retro-bg">
+                <div className="w-28 h-32 sm:w-36 sm:h-44 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-retro-bg">
                   <img
                     src="/perfil.png"
                     alt="Foto de perfil de Alejandro Lopez"
-                    className="w-full h-full"
+                    className="w-full h-full object-cover object-top"
                     loading="eager"
                   />
                 </div>
