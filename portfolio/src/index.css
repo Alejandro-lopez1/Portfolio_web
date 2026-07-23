@@ -7,34 +7,83 @@ html {
 }
 
 body {
-  @apply bg-[#0a0a0a] text-gray-300 antialiased;
+  @apply bg-retro-bg text-retro-text antialiased;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: theme('fontFamily.heading');
+  h1, h2, h3 {
+    font-family: 'Pixelify Sans', cursive;
   }
   code, pre, kbd, samp {
-    font-family: theme('fontFamily.mono');
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
 ::selection {
-  @apply bg-violet-600/30 text-white;
+  background: rgba(10, 126, 164, 0.2);
+  color: #1E1E1E;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-[#0a0a0a];
+  background: #F5F8FA;
+  border-left: 1px solid #D1D5DB;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-800 rounded-full;
+  background: #B0B8C0;
+  border-radius: 5px;
+  border: 2px solid #F5F8FA;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-zinc-700;
+  background: #0A7EA4;
+}
+
+/* Mac OS style window title bar buttons */
+.mac-btn-close {
+  @apply w-3 h-3 rounded-full bg-[#FF5F57] border border-[#E0443E];
+  transition: filter 0.15s;
+}
+
+.mac-btn-minimize {
+  @apply w-3 h-3 rounded-full bg-[#FEBC2E] border border-[#DEA123];
+  transition: filter 0.15s;
+}
+
+.mac-btn-maximize {
+  @apply w-3 h-3 rounded-full bg-[#28C840] border border-[#1AAB29];
+  transition: filter 0.15s;
+}
+
+/* Pixel border utility */
+.pixel-border {
+  box-shadow:
+    2px 0 0 0 currentColor,
+    -2px 0 0 0 currentColor,
+    0 2px 0 0 currentColor,
+    0 -2px 0 0 currentColor;
+}
+
+/* Subtle glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Terminal cursor blink */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor::after {
+  content: '█';
+  animation: terminal-blink 1s step-end infinite;
+  color: #0A7EA4;
 }

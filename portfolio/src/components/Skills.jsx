@@ -1,117 +1,86 @@
 import { motion } from 'framer-motion'
-import {
-  Code2,
-  Server,
-  Database,
-  Container,
-  Wrench,
-  BarChart3,
-} from 'lucide-react'
+import Section from './ui/Section'
+import Badge from './ui/Badge'
+import PixelIcon from './ui/PixelIcon'
 
 const categories = [
   {
     id: 'frontend',
-    icon: Code2,
+    icon: 'react',
     label: 'Frontend',
-    color: 'text-sky-400',
-    bg: 'bg-sky-500/10',
+    color: 'blue',
     items: ['React', 'Vite', 'PWA', 'Tailwind CSS', 'Framer Motion'],
   },
   {
     id: 'backend',
-    icon: Server,
+    icon: 'django',
     label: 'Backend',
-    color: 'text-violet-400',
-    bg: 'bg-violet-500/10',
+    color: 'green',
     items: ['Django', 'Django REST Framework', 'FastAPI', 'Java', 'Spring Boot'],
   },
   {
     id: 'data',
-    icon: Database,
+    icon: 'database',
     label: 'Data',
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-500/10',
+    color: 'bondi',
     items: ['MySQL', 'PostgreSQL', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
   },
   {
     id: 'devops',
-    icon: Container,
+    icon: 'docker',
     label: 'DevOps',
-    color: 'text-amber-400',
-    bg: 'bg-amber-500/10',
+    color: 'amber',
     items: ['Docker', 'Nginx', 'Render', 'Linux', 'SSH'],
   },
   {
     id: 'tools',
-    icon: Wrench,
+    icon: 'git',
     label: 'Herramientas',
-    color: 'text-cyan-400',
-    bg: 'bg-cyan-500/10',
+    color: 'violet',
     items: ['Git/GitHub', 'LangGraph', 'Groq API', 'Anthropic SDK', 'BI', 'OpenCode', 'Ollama', 'GitHub Copilot', 'Codex'],
   },
   {
     id: 'analysis',
-    icon: BarChart3,
-    label: 'Análisis',
-    color: 'text-rose-400',
-    bg: 'bg-rose-500/10',
+    icon: 'chart',
+    label: 'Analisis',
+    color: 'rose',
     items: ['Trello', 'Jira (basic)', 'Obsidian', 'Draw.io', 'Lucidchart', 'PostgreSQL', 'DBeaver', 'phpMyAdmin', 'Postman (basic)'],
   },
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 sm:py-32 px-4">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-bold text-white text-center mb-4"
-        >
-          Skills
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-gray-400 text-center max-w-xl mx-auto mb-16"
-        >
-          Tecnologías y herramientas con las que trabajo día a día
-        </motion.p>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {categories.map((cat, i) => (
-              <motion.div
-                key={cat.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="p-5 rounded-xl bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700/50 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-9 h-9 rounded-lg ${cat.bg} flex items-center justify-center`}>
-                    <cat.icon className={cat.color} size={18} />
-                  </div>
-                  <h3 className="text-white font-medium text-sm">{cat.label}</h3>
-                </div>
-                <ul className="space-y-1.5">
-                  {cat.items.map((skill) => (
-                    <li
-                      key={skill}
-                      className="text-gray-400 text-sm flex items-center gap-2"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-zinc-600" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-        </div>
+    <Section
+      id="skills"
+      title="Skills"
+      subtitle="Tecnologias y herramientas con las que trabajo dia a dia"
+    >
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {categories.map((cat, i) => (
+          <motion.div
+            key={cat.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35, delay: i * 0.06 }}
+            className="bg-white rounded-mac border border-retro-border-light p-5 shadow-apple hover:shadow-apple-lg transition-shadow duration-200"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <PixelIcon name={cat.icon} size={36} />
+              <h3 className="text-sm font-semibold text-retro-text font-sans">
+                {cat.label}
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {cat.items.map((skill) => (
+                <Badge key={skill} color={cat.color}>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </Section>
   )
 }

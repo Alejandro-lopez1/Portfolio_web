@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
   { href: '#hero', label: 'Inicio' },
-  { href: '#about', label: 'Sobre mí' },
+  { href: '#about', label: 'Sobre mi' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Proyectos' },
+  { href: '#timeline', label: 'Trayectoria' },
   { href: '#contact', label: 'Contacto' },
 ]
 
@@ -22,27 +22,33 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? 'bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-zinc-800/50'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-retro-border-light shadow-apple'
           : 'bg-transparent'
       }`}
+      role="navigation"
+      aria-label="Navegacion principal"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           <a
             href="#hero"
-            className="text-lg font-semibold text-white hover:text-violet-400 transition-colors"
+            className="flex items-center gap-2 text-bondi-500 font-pixel font-bold text-base hover:text-bondi-600 transition-colors"
+            aria-label="Ir al inicio"
           >
-            AL<span className="text-violet-500">.</span>
+            <div className="w-7 h-7 bg-bondi-500 rounded-mac flex items-center justify-center">
+              <span className="text-white text-[10px] font-pixel font-bold">AL</span>
+            </div>
+            <span className="hidden sm:inline">System Analyst</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
+                className="px-3 py-1.5 text-[13px] font-medium text-retro-muted hover:text-bondi-500 hover:bg-bondi-50 rounded-mac transition-all duration-150"
               >
                 {link.label}
               </a>
@@ -51,10 +57,25 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-gray-400 hover:text-white transition-colors"
-            aria-label="Menú"
+            className="md:hidden w-8 h-8 flex flex-col items-center justify-center gap-1 rounded-mac hover:bg-gray-100 transition-colors"
+            aria-label={open ? 'Cerrar menu' : 'Abrir menu'}
+            aria-expanded={open}
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            <span
+              className={`w-4 h-0.5 bg-retro-text transition-all duration-200 ${
+                open ? 'rotate-45 translate-y-1.5' : ''
+              }`}
+            />
+            <span
+              className={`w-4 h-0.5 bg-retro-text transition-all duration-200 ${
+                open ? 'opacity-0' : ''
+              }`}
+            />
+            <span
+              className={`w-4 h-0.5 bg-retro-text transition-all duration-200 ${
+                open ? '-rotate-45 -translate-y-1.5' : ''
+              }`}
+            />
           </button>
         </div>
       </div>
@@ -65,9 +86,10 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-zinc-800/50 bg-[#0a0a0a]/95 backdrop-blur-lg"
+            transition={{ duration: 0.2 }}
+            className="md:hidden border-t border-retro-border-light bg-white/95 backdrop-blur-xl"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-3 space-y-1">
               {links.map((link) => (
                 <a
                   key={link.href}
@@ -75,9 +97,11 @@ export default function Navbar() {
                   onClick={(e) => {
                     e.preventDefault()
                     setOpen(false)
-                    document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' })
+                    document
+                      .querySelector(link.href)
+                      ?.scrollIntoView({ behavior: 'smooth' })
                   }}
-                  className="block py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                  className="block py-2 px-3 text-sm text-retro-muted hover:text-bondi-500 hover:bg-bondi-50 rounded-mac transition-all"
                 >
                   {link.label}
                 </a>

@@ -1,98 +1,116 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, ExternalLink, FileText } from 'lucide-react'
+import Window from './ui/Window'
+import PixelButton from './ui/PixelButton'
+
+const tags = ['Java', 'SQL', 'Python', 'Analista Funcional']
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-violet-600/10 via-transparent to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-600/5 via-transparent to-transparent pointer-events-none" />
-
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mb-6"
-        >
-          <img
-            src="/perfil.png"
-            alt="Alejandro Lopez"
-            className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-violet-500/30 shadow-lg shadow-violet-600/10 mx-auto"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-violet-400 font-medium text-sm sm:text-base mb-4 tracking-wider uppercase">
-            Estudiante · Analista de Datos · Analista de Sistemas · Desarrollador Fullstack
-          </p>
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
-        >
-          Hola, soy{' '}
-          <span className="bg-gradient-to-r from-violet-400 via-violet-500 to-cyan-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-            Alejandro Lopez
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed"
-        >
-          Estudiante, analista de datos, desarrollador fullstack y emprendedor con experiencia real en negocios.
-          Construyo soluciones que unen tecnología y propósito.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <a
-            href="#projects"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white font-medium rounded-xl transition-all duration-200 shadow-lg shadow-violet-600/20 hover:shadow-violet-500/30"
-          >
-            Ver Proyectos
-            <ExternalLink size={16} />
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-white font-medium rounded-xl transition-all duration-200"
-          >
-            <FileText size={16} />
-            Descargar CV
-          </a>
-        </motion.div>
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-bondi-100/40 rounded-full blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-bondi-200/20 rounded-full blur-3xl" />
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="relative z-10 w-full max-w-3xl mx-auto"
+      >
+        <Window title="System Analyst OS v1.0" className="overflow-visible">
+          <div className="p-6 sm:p-10">
+            <div className="flex flex-col sm:flex-row items-center gap-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="shrink-0"
+              >
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-bondi-50">
+                  <img
+                    src="/perfil.png"
+                    alt="Avatar de Alejandro Lopez"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                </div>
+              </motion.div>
+
+              <div className="text-center sm:text-left flex-1 min-w-0">
+                <motion.h1
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-retro-text leading-tight mb-2"
+                >
+                  Alejandro Lopez
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                  className="text-bondi-500 font-pixel font-medium text-sm sm:text-base mb-4"
+                >
+                  Analista de Sistemas
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                  className="flex flex-wrap justify-center sm:justify-start gap-2 mb-6"
+                >
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-[11px] font-pixel font-medium bg-bondi-50 text-bondi-500 border border-bondi-100 rounded-mac"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                  className="flex flex-col sm:flex-row gap-3 justify-center sm:justify-start"
+                >
+                  <PixelButton href="#projects" variant="primary" size="md">
+                    Ver Proyectos
+                  </PixelButton>
+                  <PixelButton href="#" variant="secondary" size="md">
+                    Descargar CV
+                  </PixelButton>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </Window>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
+        transition={{ delay: 1, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <a
           href="#about"
-          className="text-gray-500 hover:text-white transition-colors"
+          className="text-retro-muted hover:text-bondi-500 transition-colors"
+          aria-label="Scroll hacia abajo"
         >
           <motion.div
-            animate={{ y: [0, 8, 0] }}
+            animate={{ y: [0, 6, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
+            className="w-6 h-6 border-2 border-current rounded-mac flex items-center justify-center"
           >
-            <ArrowDown size={20} />
+            <span className="text-[10px]">▼</span>
           </motion.div>
         </a>
       </motion.div>
