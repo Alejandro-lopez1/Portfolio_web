@@ -32,8 +32,8 @@ export default function Hero() {
               >
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-retro-bg">
                   <img
-                    src="/avatar-pixel.svg"
-                    alt="Avatar pixel art de Alejandro Lopez"
+                    src="/perfil.png"
+                    alt="Foto de perfil de Alejandro Lopez"
                     className="w-full h-full"
                     loading="eager"
                   />
