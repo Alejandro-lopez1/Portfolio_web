@@ -32,7 +32,7 @@ export default function Hero() {
               >
                 <div className="w-28 h-32 sm:w-36 sm:h-44 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-retro-bg">
                   <img
-                    src="/perfil.png"
+                    src="/perfil.jpg"
                     alt="Foto de perfil de Alejandro Lopez"
                     className="w-full h-full object-cover object-top"
                     loading="eager"
