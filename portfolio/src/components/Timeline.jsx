@@ -43,7 +43,7 @@ export default function TimelineSection() {
       <Window title="career_history.log">
         <div className="p-5 sm:p-8">
           <div className="relative">
-            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-bondi-200 sm:-translate-x-px" />
+            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-bondi-500/30 sm:-translate-x-px" />
 
             {timelineData.map((item, i) => (
               <motion.div
@@ -58,18 +58,18 @@ export default function TimelineSection() {
               >
                 <div className="hidden sm:block sm:w-1/2" />
 
-                <div className="absolute left-4 sm:left-1/2 w-3 h-3 bg-bondi-500 border-2 border-white rounded-full -translate-x-1.5 z-10 shadow-apple mt-1.5" />
+                <div className="absolute left-4 sm:left-1/2 w-3 h-3 bg-bondi-500 border-2 border-retro-surface rounded-full -translate-x-1.5 z-10 shadow-apple mt-1.5" />
 
                 <div className="pl-10 sm:pl-0 sm:w-1/2">
-                  <div className="bg-retro-bg rounded-mac border border-retro-border-light p-4 hover:shadow-apple transition-shadow duration-200">
-                    <span className="text-[10px] font-pixel font-medium text-bondi-500 mb-1 block">
+                  <div className="bg-retro-bg rounded-mac border border-retro-border p-4 hover:shadow-apple transition-shadow duration-200">
+                    <span className="text-[10px] font-pixel font-medium text-bondi-400 mb-1 block">
                       {item.year}
                     </span>
                     <h3 className="text-sm font-semibold text-retro-text mb-0.5 font-sans">
                       {item.title}
                     </h3>
                     {item.company && (
-                      <p className="text-xs text-bondi-500 font-medium mb-1.5 font-sans">
+                      <p className="text-xs text-bondi-400 font-medium mb-1.5 font-sans">
                         {item.company}
                       </p>
                     )}

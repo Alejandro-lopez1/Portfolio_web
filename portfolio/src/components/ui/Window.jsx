@@ -18,9 +18,12 @@ export default function Window({
     : {}
 
   const variantStyles = {
-    default: 'bg-white border border-retro-border shadow-apple',
-    glass: 'bg-white/80 backdrop-blur-xl border border-retro-border-light shadow-glass',
-    terminal: 'bg-[#1E1E1E] border border-gray-700 shadow-apple-lg',
+    default:
+      'bg-retro-surface border border-retro-border shadow-apple',
+    glass:
+      'bg-retro-surface/80 backdrop-blur-xl border border-retro-border-light shadow-glass',
+    terminal:
+      'bg-[#0D1117] border border-retro-border shadow-apple-lg',
   }
 
   return (
@@ -28,7 +31,7 @@ export default function Window({
       className={`rounded-mac overflow-hidden ${variantStyles[variant]} ${className}`}
       {...animProps}
     >
-      <div className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-b from-gray-100 to-gray-50 border-b border-retro-border-light select-none">
+      <div className="flex items-center gap-2 px-4 py-2.5 bg-retro-bg border-b border-retro-border select-none">
         <div className="flex gap-1.5">
           <span className="mac-btn-close" />
           <span className="mac-btn-minimize" />

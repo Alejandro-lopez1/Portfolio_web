@@ -21,8 +21,7 @@ body {
 }
 
 ::selection {
-  background: rgba(10, 126, 164, 0.2);
-  color: #1E1E1E;
+  background: rgba(10, 126, 164, 0.3);
 }
 
 ::-webkit-scrollbar {
@@ -30,14 +29,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F8FA;
-  border-left: 1px solid #D1D5DB;
+  background: #0D1117;
+  border-left: 1px solid #21262D;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B0B8C0;
+  background: #30363D;
   border-radius: 5px;
-  border: 2px solid #F5F8FA;
+  border: 2px solid #0D1117;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -71,7 +70,7 @@ body {
 
 /* Subtle glass effect */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(22, 27, 34, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }

@@ -68,9 +68,9 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex gap-4 p-4 bg-white rounded-mac border border-retro-border-light shadow-apple hover:shadow-apple-lg transition-shadow duration-200"
+              className="flex gap-4 p-4 bg-retro-surface rounded-mac border border-retro-border shadow-apple hover:shadow-apple-lg transition-shadow duration-200"
             >
-              <div className="shrink-0 w-10 h-10 rounded-mac bg-bondi-50 flex items-center justify-center text-lg">
+              <div className="shrink-0 w-10 h-10 rounded-mac bg-bondi-50/30 flex items-center justify-center text-lg">
                 {item.icon}
               </div>
               <div>

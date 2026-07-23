@@ -11,8 +11,8 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-bondi-100/40 rounded-full blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-bondi-200/20 rounded-full blur-3xl" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-bondi-500/8 rounded-full blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-bondi-500/5 rounded-full blur-3xl" />
       </div>
 
       <motion.div
@@ -30,11 +30,11 @@ export default function Hero() {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="shrink-0"
               >
-                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-bondi-50">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-retro-bg">
                   <img
-                    src="/perfil.png"
-                    alt="Avatar de Alejandro Lopez"
-                    className="w-full h-full object-cover"
+                    src="/avatar-pixel.svg"
+                    alt="Avatar pixel art de Alejandro Lopez"
+                    className="w-full h-full"
                     loading="eager"
                   />
                 </div>
@@ -54,7 +54,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
-                  className="text-bondi-500 font-pixel font-medium text-sm sm:text-base mb-4"
+                  className="text-bondi-400 font-pixel font-medium text-sm sm:text-base mb-4"
                 >
                   Analista de Sistemas
                 </motion.p>
@@ -68,7 +68,7 @@ export default function Hero() {
                   {tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-[11px] font-pixel font-medium bg-bondi-50 text-bondi-500 border border-bondi-100 rounded-mac"
+                      className="px-3 py-1 text-[11px] font-pixel font-medium bg-bondi-50/40 text-bondi-300 border border-bondi-200/40 rounded-mac"
                     >
                       {tag}
                     </span>
@@ -102,7 +102,7 @@ export default function Hero() {
       >
         <a
           href="#about"
-          className="text-retro-muted hover:text-bondi-500 transition-colors"
+          className="text-retro-muted hover:text-bondi-400 transition-colors"
           aria-label="Scroll hacia abajo"
         >
           <motion.div

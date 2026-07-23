@@ -63,7 +63,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.06 }}
-            className="bg-white rounded-mac border border-retro-border-light p-5 shadow-apple hover:shadow-apple-lg transition-shadow duration-200"
+            className="bg-retro-surface rounded-mac border border-retro-border p-5 shadow-apple hover:shadow-apple-lg transition-shadow duration-200"
           >
             <div className="flex items-center gap-3 mb-4">
               <PixelIcon name={cat.icon} size={36} />

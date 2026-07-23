@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-retro-border-light shadow-apple'
+          ? 'bg-retro-surface/90 backdrop-blur-xl border-b border-retro-border shadow-apple'
           : 'bg-transparent'
       }`}
       role="navigation"
@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14">
           <a
             href="#hero"
-            className="flex items-center gap-2 text-bondi-500 font-pixel font-bold text-base hover:text-bondi-600 transition-colors"
+            className="flex items-center gap-2 text-bondi-400 font-pixel font-bold text-base hover:text-bondi-300 transition-colors"
             aria-label="Ir al inicio"
           >
             <div className="w-7 h-7 bg-bondi-500 rounded-mac flex items-center justify-center">
@@ -48,7 +48,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-1.5 text-[13px] font-medium text-retro-muted hover:text-bondi-500 hover:bg-bondi-50 rounded-mac transition-all duration-150"
+                className="px-3 py-1.5 text-[13px] font-medium text-retro-muted hover:text-bondi-400 hover:bg-bondi-50/20 rounded-mac transition-all duration-150"
               >
                 {link.label}
               </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden w-8 h-8 flex flex-col items-center justify-center gap-1 rounded-mac hover:bg-gray-100 transition-colors"
+            className="md:hidden w-8 h-8 flex flex-col items-center justify-center gap-1 rounded-mac hover:bg-retro-border-light/50 transition-colors"
             aria-label={open ? 'Cerrar menu' : 'Abrir menu'}
             aria-expanded={open}
           >
@@ -87,7 +87,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-retro-border-light bg-white/95 backdrop-blur-xl"
+            className="md:hidden border-t border-retro-border bg-retro-surface/95 backdrop-blur-xl"
           >
             <div className="px-4 py-3 space-y-1">
               {links.map((link) => (
@@ -101,7 +101,7 @@ export default function Navbar() {
                       .querySelector(link.href)
                       ?.scrollIntoView({ behavior: 'smooth' })
                   }}
-                  className="block py-2 px-3 text-sm text-retro-muted hover:text-bondi-500 hover:bg-bondi-50 rounded-mac transition-all"
+                  className="block py-2 px-3 text-sm text-retro-muted hover:text-bondi-400 hover:bg-bondi-50/20 rounded-mac transition-all"
                 >
                   {link.label}
                 </a>

@@ -14,11 +14,11 @@ export default function PixelButton({
     primary:
       'bg-bondi-500 text-white hover:bg-bondi-600 shadow-apple hover:shadow-apple-lg',
     secondary:
-      'bg-white text-retro-text border border-retro-border hover:border-bondi-500 hover:text-bondi-500 shadow-apple',
+      'bg-retro-surface text-retro-text border border-retro-border hover:border-bondi-500 hover:text-bondi-400 shadow-apple',
     ghost:
-      'bg-transparent text-retro-muted hover:text-bondi-500 hover:bg-bondi-50',
+      'bg-transparent text-retro-muted hover:text-bondi-400 hover:bg-bondi-50/20',
     terminal:
-      'bg-[#2D2D2D] text-bondi-300 border border-gray-600 hover:border-bondi-500 hover:text-bondi-300',
+      'bg-retro-surface text-bondi-300 border border-retro-border hover:border-bondi-500 hover:text-bondi-300',
   }
 
   const sizes = {

@@ -70,7 +70,7 @@ export default function Projects() {
                 )}
 
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="shrink-0 w-12 h-12 rounded-mac bg-bondi-50 border border-bondi-100 flex items-center justify-center text-2xl">
+                  <div className="shrink-0 w-12 h-12 rounded-mac bg-bondi-50/30 border border-bondi-200/30 flex items-center justify-center text-2xl">
                     {project.icon}
                   </div>
                   <div className="flex-1 min-w-0">

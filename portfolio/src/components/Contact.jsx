@@ -34,11 +34,11 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto">
         <Window title="terminal.app" variant="terminal">
           <div className="p-5 sm:p-6">
-            <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700">
+            <div className="flex items-center gap-2 mb-4 pb-3 border-b border-retro-border">
               <span className="mac-btn-close" />
               <span className="mac-btn-minimize" />
               <span className="mac-btn-maximize" />
-              <span className="ml-2 text-[11px] text-gray-500 font-mono">
+              <span className="ml-2 text-[11px] text-retro-muted font-mono">
                 terminal — bash
               </span>
             </div>
@@ -46,7 +46,7 @@ export default function Contact() {
             <div className="space-y-3 font-mono text-sm">
               <div className="flex items-start gap-2">
                 <span className="text-bondi-400 shrink-0">$</span>
-                <span className="text-gray-300">cat contact_info.json</span>
+                <span className="text-retro-text">cat contact_info.json</span>
               </div>
 
               <motion.div
@@ -54,7 +54,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="pl-4 border-l border-gray-700 space-y-2"
+                className="pl-4 border-l border-retro-border space-y-2"
               >
                 {contacts.map((item) => (
                   <a
@@ -69,10 +69,10 @@ export default function Contact() {
                       className="text-bondi-400 shrink-0 group-hover:text-bondi-300 transition-colors"
                     />
                     <div className="min-w-0">
-                      <p className="text-[11px] text-gray-500 font-pixel">
+                      <p className="text-[11px] text-retro-muted font-pixel">
                         {item.label}
                       </p>
-                      <p className="text-xs text-gray-300 group-hover:text-white transition-colors truncate">
+                      <p className="text-xs text-retro-text group-hover:text-white transition-colors truncate">
                         {item.value}
                       </p>
                     </div>
@@ -82,15 +82,15 @@ export default function Contact() {
 
               <div className="flex items-center gap-2 pt-2">
                 <span className="text-bondi-400">$</span>
-                <span className="text-gray-300 flex items-center gap-1.5">
-                  <MapPin size={12} className="text-gray-500" />
+                <span className="text-retro-text flex items-center gap-1.5">
+                  <MapPin size={12} className="text-retro-muted" />
                   Argentina
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
                 <span className="text-bondi-400">$</span>
-                <span className="text-gray-300">echo &quot;Gracias por visitar&quot;</span>
+                <span className="text-retro-text">echo &quot;Gracias por visitar&quot;</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-bondi-400">→</span>
@@ -106,7 +106,7 @@ export default function Contact() {
         </Window>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-16 pt-6 border-t border-retro-border-light">
+      <div className="max-w-6xl mx-auto mt-16 pt-6 border-t border-retro-border">
         <p className="text-center text-retro-muted text-xs">
           &copy; {new Date().getFullYear()} Alejandro Lopez — Built with React & Tailwind CSS
         </p>
