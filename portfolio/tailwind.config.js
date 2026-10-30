@@ -30,10 +30,10 @@ export default {
         },
       },
       fontFamily: {
-        pixel: ['"Pixelify Sans"', 'cursive'],
-        'pixel-start': ['"Press Start 2P"', 'cursive'],
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        pixel: ['Poppins', 'system-ui', 'sans-serif'],
+        'pixel-start': ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['Poppins', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'apple': '0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25)',
