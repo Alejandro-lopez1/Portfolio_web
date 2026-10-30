@@ -16,10 +16,10 @@ import Badge from './ui/Badge'
 import PixelButton from './ui/PixelButton'
 import Window from './ui/Window'
 
-const email = 'alejandro.lopez14591@gmail.com'
+const contactEmail = 'alejandro.lopez14591@gmail.com'
 
-const quoteLink = (service) =>
-  `mailto:${email}?subject=${encodeURIComponent(`Cotizacion: ${service}`)}`
+const mailtoLink = (subject) =>
+  `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`
 
 const services = [
   {
@@ -193,7 +193,7 @@ export default function Services() {
                   Presupuesto a medida
                 </span>
                 <a
-                  href={quoteLink(service.title)}
+                  href={mailtoLink(`Cotizacion: ${service.title}`)}
                   className="inline-flex items-center gap-1 text-[11px] font-pixel font-medium text-brand-400 hover:text-brand-300 transition-colors"
                 >
                   Cotizar
@@ -268,10 +268,12 @@ export default function Services() {
           </div>
 
           <PixelButton
-            href={quoteLink('Proyecto digital')}
+            href={mailtoLink('Solicitud de cotizacion')}
             variant="primary"
             size="lg"
             className="shrink-0"
+            title={`Escribir a ${contactEmail}`}
+            aria-label={`Enviar solicitud de cotizacion a ${contactEmail}`}
           >
             Solicitar cotizacion
             <ArrowUpRight size={15} aria-hidden="true" />
