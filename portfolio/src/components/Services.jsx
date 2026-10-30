@@ -8,6 +8,7 @@ import {
   Globe,
   LayoutDashboard,
   Lightbulb,
+  Mail,
   Sparkles,
   Workflow,
 } from 'lucide-react'
@@ -17,6 +18,9 @@ import PixelButton from './ui/PixelButton'
 import Window from './ui/Window'
 
 const contactEmail = 'alejandro.lopez14591@gmail.com'
+
+const gmailCompose = (subject) =>
+  `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}&su=${encodeURIComponent(subject)}`
 
 const mailtoLink = (subject) =>
   `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`
@@ -193,7 +197,9 @@ export default function Services() {
                   Presupuesto a medida
                 </span>
                 <a
-                  href={mailtoLink(`Cotizacion: ${service.title}`)}
+                  href={gmailCompose(`Cotizacion: ${service.title}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-[11px] font-pixel font-medium text-brand-400 hover:text-brand-300 transition-colors"
                 >
                   Cotizar
@@ -265,10 +271,21 @@ export default function Services() {
               <Clock size={13} aria-hidden="true" />
               Respuesta en menos de 48 horas · Sin compromiso
             </p>
+            <p className="flex items-center gap-2 text-xs text-retro-muted mt-1.5">
+              <Mail size={13} aria-hidden="true" />
+              <a
+                href={mailtoLink('Consulta')}
+                className="hover:text-brand-300 transition-colors"
+              >
+                {contactEmail}
+              </a>
+            </p>
           </div>
 
           <PixelButton
-            href={mailtoLink('Solicitud de cotizacion')}
+            href={gmailCompose('Solicitud de cotizacion')}
+            target="_blank"
+            rel="noopener noreferrer"
             variant="primary"
             size="lg"
             className="shrink-0"
