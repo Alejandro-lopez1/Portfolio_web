@@ -23,7 +23,7 @@ export default function Window({
     glass:
       'bg-retro-surface/80 backdrop-blur-xl border border-retro-border-light shadow-glass',
     terminal:
-      'bg-[#0D1117] border border-retro-border shadow-apple-lg',
+      'bg-[#070B09] border border-retro-border shadow-apple-lg',
   }
 
   return (

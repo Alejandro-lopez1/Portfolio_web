@@ -63,14 +63,14 @@ export default function Projects() {
               <div className="p-5 sm:p-6">
                 {project.featured && (
                   <div className="absolute top-3 right-4 z-10">
-                    <span className="px-2 py-0.5 text-[9px] font-pixel font-bold bg-bondi-500 text-white rounded-mac">
+                    <span className="px-2 py-0.5 text-[9px] font-pixel font-bold bg-brand-500 text-retro-bg rounded-mac">
                       PROYECTO PRINCIPAL
                     </span>
                   </div>
                 )}
 
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="shrink-0 w-12 h-12 rounded-mac bg-bondi-50/30 border border-bondi-200/30 flex items-center justify-center text-2xl">
+                  <div className="shrink-0 w-12 h-12 rounded-mac bg-brand-50/30 border border-brand-200/30 flex items-center justify-center text-2xl">
                     {project.icon}
                   </div>
                   <div className="flex-1 min-w-0">

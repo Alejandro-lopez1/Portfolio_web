@@ -54,7 +54,7 @@ export default function Terminal({
         {lines.map((line, i) => (
           <div key={i} className="flex gap-2">
             {line.prompt && (
-              <span className="text-bondi-400 shrink-0">{line.prompt}</span>
+              <span className="text-brand-400 shrink-0">{line.prompt}</span>
             )}
             <span className="text-gray-300">{line.text}</span>
           </div>
@@ -80,7 +80,7 @@ export default function Terminal({
           className="flex gap-2"
         >
           {line.prompt && (
-            <span className="text-bondi-400 shrink-0">{line.prompt}</span>
+            <span className="text-brand-400 shrink-0">{line.prompt}</span>
           )}
           <span className={line.color || 'text-gray-300'}>{line.text}</span>
         </motion.div>
@@ -88,7 +88,7 @@ export default function Terminal({
       {currentLineText !== undefined && currentLine < lines.length && (
         <div className="flex gap-2">
           {lines[currentLine]?.prompt && (
-            <span className="text-bondi-400 shrink-0">
+            <span className="text-brand-400 shrink-0">
               {lines[currentLine].prompt}
             </span>
           )}
@@ -100,7 +100,7 @@ export default function Terminal({
       )}
       {!isTyping && showPrompt && (
         <div className="flex gap-2 mt-1">
-          <span className="text-bondi-400">❯</span>
+          <span className="text-brand-400">❯</span>
           <span className="terminal-cursor" />
         </div>
       )}

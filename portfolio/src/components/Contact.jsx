@@ -45,7 +45,7 @@ export default function Contact() {
 
             <div className="space-y-3 font-mono text-sm">
               <div className="flex items-start gap-2">
-                <span className="text-bondi-400 shrink-0">$</span>
+                <span className="text-brand-400 shrink-0">$</span>
                 <span className="text-retro-text">cat contact_info.json</span>
               </div>
 
@@ -66,13 +66,13 @@ export default function Contact() {
                   >
                     <item.icon
                       size={16}
-                      className="text-bondi-400 shrink-0 group-hover:text-bondi-300 transition-colors"
+                      className="text-brand-400 shrink-0 group-hover:text-brand-300 transition-colors"
                     />
                     <div className="min-w-0">
                       <p className="text-[11px] text-retro-muted font-pixel">
                         {item.label}
                       </p>
-                      <p className="text-xs text-retro-text group-hover:text-white transition-colors truncate">
+                      <p className="text-xs text-retro-text group-hover:text-brand-300 transition-colors truncate">
                         {item.value}
                       </p>
                     </div>
@@ -81,7 +81,7 @@ export default function Contact() {
               </motion.div>
 
               <div className="flex items-center gap-2 pt-2">
-                <span className="text-bondi-400">$</span>
+                <span className="text-brand-400">$</span>
                 <span className="text-retro-text flex items-center gap-1.5">
                   <MapPin size={12} className="text-retro-muted" />
                   Argentina
@@ -89,16 +89,16 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-bondi-400">$</span>
+                <span className="text-brand-400">$</span>
                 <span className="text-retro-text">echo &quot;Gracias por visitar&quot;</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-bondi-400">→</span>
-                <span className="text-bondi-300">Gracias por visitar</span>
+                <span className="text-brand-400">→</span>
+                <span className="text-brand-300">Gracias por visitar</span>
               </div>
 
               <div className="flex items-center gap-2 pt-1">
-                <span className="text-bondi-400">$</span>
+                <span className="text-brand-400">$</span>
                 <span className="terminal-cursor" />
               </div>
             </div>

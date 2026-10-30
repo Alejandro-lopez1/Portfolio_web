@@ -13,7 +13,7 @@ const icons = {
   ),
   sql: (
     <svg viewBox="0 0 32 32" fill="none" className="w-full h-full">
-      <rect width="32" height="32" rx="4" fill="#0A7EA4"/>
+      <rect width="32" height="32" rx="4" fill="#15AD6E"/>
       <text x="16" y="22" fontFamily="monospace" fontSize="10" fontWeight="bold" fill="white" textAnchor="middle">SQL</text>
     </svg>
   ),
@@ -84,10 +84,10 @@ export default function PixelIcon({ name, size = 32, className = '' }) {
   if (!icon) {
     return (
       <div
-        className={`bg-bondi-100 rounded-mac flex items-center justify-center ${className}`}
+        className={`bg-brand-100 rounded-mac flex items-center justify-center ${className}`}
         style={{ width: size, height: size }}
       >
-        <span className="text-bondi-500 font-pixel text-[10px]">?</span>
+        <span className="text-brand-500 font-pixel text-[10px]">?</span>
       </div>
     )
   }

@@ -11,8 +11,8 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-bondi-500/8 rounded-full blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-bondi-500/5 rounded-full blur-3xl" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-brand-500/8 rounded-full blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl" />
       </div>
 
       <motion.div
@@ -30,7 +30,7 @@ export default function Hero() {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="shrink-0"
               >
-                <div className="w-28 h-32 sm:w-36 sm:h-44 rounded-mac border-2 border-bondi-200 overflow-hidden shadow-apple-lg bg-retro-bg">
+                <div className="w-28 h-32 sm:w-36 sm:h-44 rounded-mac border-2 border-brand-200 overflow-hidden shadow-apple-lg bg-retro-bg">
                   <img
                     src="/perfil.jpg"
                     alt="Foto de perfil de Alejandro Lopez"
@@ -54,7 +54,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
-                  className="text-bondi-400 font-pixel font-medium text-sm sm:text-base mb-4"
+                  className="text-brand-400 font-pixel font-medium text-sm sm:text-base mb-4"
                 >
                   Analista de Sistemas
                 </motion.p>
@@ -68,7 +68,7 @@ export default function Hero() {
                   {tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-[11px] font-pixel font-medium bg-bondi-50/40 text-bondi-300 border border-bondi-200/40 rounded-mac"
+                      className="px-3 py-1 text-[11px] font-pixel font-medium bg-brand-50/40 text-brand-300 border border-brand-200/40 rounded-mac"
                     >
                       {tag}
                     </span>
@@ -81,11 +81,11 @@ export default function Hero() {
                   transition={{ duration: 0.4, delay: 0.6 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center sm:justify-start"
                 >
-                  <PixelButton href="#projects" variant="primary" size="md">
-                    Ver Proyectos
+                  <PixelButton href="#services" variant="primary" size="md">
+                    Ver Servicios
                   </PixelButton>
-                  <PixelButton href="#" variant="secondary" size="md">
-                    Descargar CV
+                  <PixelButton href="#projects" variant="secondary" size="md">
+                    Ver Proyectos
                   </PixelButton>
                 </motion.div>
               </div>
@@ -102,7 +102,7 @@ export default function Hero() {
       >
         <a
           href="#about"
-          className="text-retro-muted hover:text-bondi-400 transition-colors"
+          className="text-retro-muted hover:text-brand-400 transition-colors"
           aria-label="Scroll hacia abajo"
         >
           <motion.div

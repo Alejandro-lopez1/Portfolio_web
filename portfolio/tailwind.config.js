@@ -8,25 +8,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        bondi: {
-          50: '#0D3A4A',
-          100: '#104860',
-          200: '#145A78',
-          300: '#7ED4F7',
-          400: '#9BD8E9',
-          500: '#0A7EA4',
-          600: '#0E9BC6',
-          700: '#12B4E0',
-          800: '#5ECFF0',
-          900: '#A3E4F8',
+        brand: {
+          50: '#061A10',
+          100: '#0A2A1A',
+          200: '#0D4E2D',
+          300: '#A7F3D0',
+          400: '#3DDC97',
+          500: '#15AD6E',
+          600: '#0F8F5A',
+          700: '#058042',
+          800: '#0B6B42',
+          900: '#D1FAE5',
         },
         retro: {
-          bg: '#0D1117',
-          surface: '#161B22',
-          text: '#E6EDF3',
-          muted: '#8B949E',
-          border: '#30363D',
-          'border-light': '#21262D',
+          bg: '#0A0E0D',
+          surface: '#111715',
+          text: '#FAF9F6',
+          muted: '#9BA8A2',
+          border: '#223029',
+          'border-light': '#18211D',
         },
       },
       fontFamily: {
@@ -36,10 +36,11 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
-        'apple': '0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2)',
-        'apple-lg': '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2)',
-        'apple-inset': 'inset 0 1px 2px rgba(0, 0, 0, 0.2)',
-        'glass': '0 8px 32px rgba(10, 126, 164, 0.15)',
+        'apple': '0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25)',
+        'apple-lg': '0 4px 16px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.25)',
+        'apple-inset': 'inset 0 1px 2px rgba(0, 0, 0, 0.25)',
+        'glass': '0 8px 32px rgba(21, 173, 110, 0.15)',
+        'glow': '0 0 0 1px rgba(21, 173, 110, 0.25), 0 8px 32px rgba(21, 173, 110, 0.18)',
       },
       animation: {
         'blink': 'blink 1.2s step-end infinite',

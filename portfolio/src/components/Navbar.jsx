@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const links = [
   { href: '#hero', label: 'Inicio' },
   { href: '#about', label: 'Sobre mi' },
+  { href: '#services', label: 'Servicios' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Proyectos' },
   { href: '#timeline', label: 'Trayectoria' },
@@ -34,21 +35,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14">
           <a
             href="#hero"
-            className="flex items-center gap-2 text-bondi-400 font-pixel font-bold text-base hover:text-bondi-300 transition-colors"
+            className="flex items-center gap-2 text-brand-400 font-pixel font-bold text-base hover:text-brand-300 transition-colors"
             aria-label="Ir al inicio"
           >
-            <div className="w-7 h-7 bg-bondi-500 rounded-mac flex items-center justify-center">
-              <span className="text-white text-[10px] font-pixel font-bold">AL</span>
+            <div className="w-7 h-7 bg-brand-500 rounded-mac flex items-center justify-center">
+              <span className="text-retro-bg text-[10px] font-pixel font-bold">AL</span>
             </div>
             <span className="hidden sm:inline">System Analyst</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-1.5 text-[13px] font-medium text-retro-muted hover:text-bondi-400 hover:bg-bondi-50/20 rounded-mac transition-all duration-150"
+                className="px-3 py-1.5 text-[13px] font-medium text-retro-muted hover:text-brand-400 hover:bg-brand-50/20 rounded-mac transition-all duration-150"
               >
                 {link.label}
               </a>
@@ -57,7 +58,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden w-8 h-8 flex flex-col items-center justify-center gap-1 rounded-mac hover:bg-retro-border-light/50 transition-colors"
+            className="lg:hidden w-8 h-8 flex flex-col items-center justify-center gap-1 rounded-mac hover:bg-retro-border-light/50 transition-colors"
             aria-label={open ? 'Cerrar menu' : 'Abrir menu'}
             aria-expanded={open}
           >
@@ -87,7 +88,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-retro-border bg-retro-surface/95 backdrop-blur-xl"
+            className="lg:hidden border-t border-retro-border bg-retro-surface/95 backdrop-blur-xl"
           >
             <div className="px-4 py-3 space-y-1">
               {links.map((link) => (
@@ -101,7 +102,7 @@ export default function Navbar() {
                       .querySelector(link.href)
                       ?.scrollIntoView({ behavior: 'smooth' })
                   }}
-                  className="block py-2 px-3 text-sm text-retro-muted hover:text-bondi-400 hover:bg-bondi-50/20 rounded-mac transition-all"
+                  className="block py-2 px-3 text-sm text-retro-muted hover:text-brand-400 hover:bg-brand-50/20 rounded-mac transition-all"
                 >
                   {link.label}
                 </a>

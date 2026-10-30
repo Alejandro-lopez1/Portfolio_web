@@ -1,11 +1,9 @@
-export default function Badge({ children, color = 'bondi', className = '' }) {
+export default function Badge({ children, color = 'brand', className = '' }) {
   const colors = {
-    bondi: 'bg-bondi-50 text-bondi-400 border-bondi-200',
-    blue: 'bg-sky-500/10 text-sky-400 border-sky-500/20',
-    green: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-    amber: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-    rose: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
-    violet: 'bg-violet-500/10 text-violet-400 border-violet-500/20',
+    brand: 'bg-brand-500/10 text-brand-400 border-brand-500/25',
+    mint: 'bg-brand-300/10 text-brand-300 border-brand-300/25',
+    deep: 'bg-brand-700/15 text-brand-300 border-brand-700/40',
+    outline: 'bg-transparent text-brand-400 border-brand-500/30',
     gray: 'bg-retro-border-light/60 text-retro-muted border-retro-border',
   }
 
