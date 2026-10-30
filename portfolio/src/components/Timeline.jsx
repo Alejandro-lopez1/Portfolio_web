@@ -4,28 +4,28 @@ import Section from './ui/Section'
 
 const timelineData = [
   {
-    year: '2024 - Actualidad',
+    year: '2025 - Actualidad',
     title: 'Estudiante de Analisis de Sistemas',
     company: 'Universidad',
     description:
       'Formacion en analisis de sistemas, bases de datos, ingenieria de software y metodologias agiles.',
   },
   {
-    year: '2024',
+    year: '2022 - Actualidad',
     title: 'Desarrollador Fullstack',
     company: 'Proyectos personales',
     description:
       'Desarrollo de MotoFix (PWA) y Backoffice Academico. Stack: React, Django REST, PostgreSQL, Docker.',
   },
   {
-    year: '2023 - 2024',
+    year: '2024 - Actualidad',
     title: 'Analista de Datos',
     company: 'Proyectos y formacion',
     description:
       'Trabajo con Python, SQL, Pandas, NumPy y herramientas de visualizacion para toma de decisiones.',
   },
   {
-    year: '2022 - 2024',
+    year: '2024 - Actualidad',
     title: 'Emprendedor',
     company: 'Negocios propios',
     description:
