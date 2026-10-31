@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   ArrowUpRight,
@@ -8,22 +9,13 @@ import {
   Globe,
   LayoutDashboard,
   Lightbulb,
-  Mail,
   Sparkles,
   Workflow,
 } from 'lucide-react'
 import Section from './ui/Section'
 import Badge from './ui/Badge'
-import PixelButton from './ui/PixelButton'
+import ContactForm from './ui/ContactForm'
 import Window from './ui/Window'
-
-const contactEmail = 'alejandro.lopez14591@gmail.com'
-
-const gmailCompose = (subject) =>
-  `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}&su=${encodeURIComponent(subject)}`
-
-const mailtoLink = (subject) =>
-  `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`
 
 const services = [
   {
@@ -137,6 +129,14 @@ const steps = [
 ]
 
 export default function Services() {
+  const [selectedService, setSelectedService] = useState('')
+  const formRef = useRef(null)
+
+  const requestQuote = (service) => {
+    setSelectedService(service)
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+
   return (
     <Section
       id="services"
@@ -196,15 +196,14 @@ export default function Services() {
                 <span className="text-[10px] font-pixel uppercase tracking-wider text-retro-muted">
                   Presupuesto a medida
                 </span>
-                <a
-                  href={gmailCompose(`Cotizacion: ${service.title}`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => requestQuote(service.title)}
                   className="inline-flex items-center gap-1 text-[11px] font-pixel font-medium text-brand-400 hover:text-brand-300 transition-colors"
                 >
                   Cotizar
                   <ArrowUpRight size={13} aria-hidden="true" />
-                </a>
+                </button>
               </div>
             </motion.article>
           )
@@ -259,7 +258,7 @@ export default function Services() {
           aria-hidden="true"
         />
 
-        <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+        <div className="relative grid lg:grid-cols-[1fr_1.1fr] items-start gap-6">
           <div>
             <p className="font-pixel text-[10px] uppercase tracking-[0.2em] text-brand-400 mb-2">
               Proyecto en mente
@@ -271,30 +270,19 @@ export default function Services() {
               <Clock size={13} aria-hidden="true" />
               Respuesta en menos de 48 horas · Sin compromiso
             </p>
-            <p className="flex items-center gap-2 text-xs text-retro-muted mt-1.5">
-              <Mail size={13} aria-hidden="true" />
-              <a
-                href={mailtoLink('Consulta')}
-                className="hover:text-brand-300 transition-colors"
-              >
-                {contactEmail}
-              </a>
-            </p>
           </div>
 
-          <PixelButton
-            href={gmailCompose('Solicitud de cotizacion')}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="primary"
-            size="lg"
-            className="shrink-0"
-            title={`Escribir a ${contactEmail}`}
-            aria-label={`Enviar solicitud de cotizacion a ${contactEmail}`}
+          <div
+            ref={formRef}
+            id="cotizacion"
+            className="scroll-mt-24 rounded-mac border border-retro-border bg-retro-bg/70 p-4 sm:p-5"
           >
-            Solicitar cotizacion
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </PixelButton>
+            <ContactForm
+              defaultService={selectedService}
+              source="Servicios"
+              submitLabel="Solicitar cotizacion"
+            />
+          </div>
         </div>
       </motion.div>
     </Section>

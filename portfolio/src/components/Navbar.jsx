@@ -41,7 +41,7 @@ export default function Navbar() {
             <div className="w-7 h-7 bg-brand-500 rounded-mac flex items-center justify-center">
               <span className="text-retro-bg text-[10px] font-pixel font-bold">AL</span>
             </div>
-            <span className="hidden sm:inline">System Analyst</span>
+            <span className="hidden sm:inline">Analista - Programador</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-1">

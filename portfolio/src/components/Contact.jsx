@@ -1,15 +1,10 @@
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, MapPin } from 'lucide-react'
+import { Github, Linkedin, MapPin } from 'lucide-react'
 import Window from './ui/Window'
 import Section from './ui/Section'
+import ContactForm from './ui/ContactForm'
 
 const contacts = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'alejandro.lopez14591@gmail.com',
-    href: 'mailto:alejandro.lopez14591@gmail.com',
-  },
   {
     icon: Github,
     label: 'GitHub',
@@ -29,10 +24,10 @@ export default function Contact() {
     <Section
       id="contact"
       title="Contacto"
-      subtitle="Estoy abierto a oportunidades laborales, colaboraciones y proyectos interesantes."
+      subtitle="Contame tu idea o proyecto directamente desde el formulario. Te respondo a la brevedad."
     >
-      <div className="max-w-2xl mx-auto">
-        <Window title="terminal.app" variant="terminal">
+      <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-6 items-start">
+        <Window title="contact_info.sh" variant="terminal">
           <div className="p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4 pb-3 border-b border-retro-border">
               <span className="mac-btn-close" />
@@ -104,9 +99,15 @@ export default function Contact() {
             </div>
           </div>
         </Window>
+
+        <Window title="contacto.form">
+          <div className="p-5 sm:p-6">
+            <ContactForm source="Contacto" submitLabel="Enviar mensaje" />
+          </div>
+        </Window>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-16 pt-6 border-t border-retro-border">
+      <div className="max-w-5xl mx-auto mt-16 pt-6 border-t border-retro-border">
         <p className="text-center text-retro-muted text-xs">
           &copy; {new Date().getFullYear()} Alejandro Lopez — Built with React & Tailwind CSS
         </p>

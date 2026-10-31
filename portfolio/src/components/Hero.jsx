@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Window from './ui/Window'
 import PixelButton from './ui/PixelButton'
 
-const tags = ['Java', 'SQL', 'Python', 'Analista Funcional']
+const tags = ['Python', 'Java', 'SQL']
 
 export default function Hero() {
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className="relative z-10 w-full max-w-3xl mx-auto"
       >
-        <Window title="System Analyst OS v1.0" className="overflow-visible">
+        <Window title="Analista - Programador OS v1.0" className="overflow-visible">
           <div className="p-6 sm:p-10">
             <div className="flex flex-col sm:flex-row items-center gap-8">
               <motion.div
@@ -56,7 +56,7 @@ export default function Hero() {
                   transition={{ duration: 0.4, delay: 0.4 }}
                   className="text-brand-400 font-pixel font-medium text-sm sm:text-base mb-4"
                 >
-                  Analista de Sistemas
+                  Analista - Programador
                 </motion.p>
 
                 <motion.div

@@ -8,7 +8,7 @@ export default function PixelButton({
   ...props
 }) {
   const base =
-    'inline-flex items-center justify-center gap-2 font-pixel font-medium transition-all duration-150 cursor-pointer select-none active:translate-y-px'
+    'inline-flex items-center justify-center gap-2 font-pixel font-medium transition-all duration-150 cursor-pointer select-none active:translate-y-px disabled:opacity-60 disabled:cursor-not-allowed disabled:active:translate-y-0'
 
   const variants = {
     primary:
