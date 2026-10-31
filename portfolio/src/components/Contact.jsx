@@ -116,7 +116,7 @@ export default function Contact({ quoteRequest = { service: '', id: 0 } }) {
 
       <div className="max-w-5xl mx-auto mt-16 pt-6 border-t border-retro-border">
         <p className="text-center text-retro-muted text-xs">
-          &copy; {new Date().getFullYear()} Alejandro Lopez — Built with React & Tailwind CSS
+          &copy; {new Date().getFullYear()} Alejandro Lopez
         </p>
       </div>
     </Section>

@@ -40,21 +40,19 @@ export default function About() {
           <Window title="about_me.txt">
             <div className="p-5 space-y-4">
               <p className="text-sm text-retro-text leading-relaxed">
-                Soy estudiante de analisis de sistemas con experiencia como
+                Soy estudiante de análisis de sistemas con experiencia como
                 desarrollador fullstack, analista de datos y emprendedor. He
-                trabajado con tecnologias modernas como React, Django, FastAPI
-                y PostgreSQL, y tambien se lo que es gestionar un inventario,
+                trabajado con tecnologías modernas como React, Django, FastAPI
+                y PostgreSQL, y también sé lo que es gestionar un inventario,
                 negociar con proveedores y mantener un negocio a flote.
               </p>
               <p className="text-sm text-retro-muted leading-relaxed">
-                Esa combinacion —tecnica + negocio— me permite entender el
-                panorama completo: desde como se escribe una consulta SQL hasta
-                por que un cliente necesita tal funcionalidad.
+                Esa combinación —técnica + negocio— me permite entender el
+                panorama completo: desde cómo se escribe una consulta SQL hasta
+                por qué un cliente necesita tal funcionalidad.
               </p>
               <p className="text-sm text-retro-muted leading-relaxed">
-                Actualmente busco oportunidades donde pueda aportar como
-                desarrollador, analista o ambos, y seguir creciendo
-                profesionalmente.
+                Actualmente estoy realizando proyectos freelance y buscando oportunidades para aplicar mis habilidades en entornos reales, donde pueda seguir aprendiendo y aportando valor.
               </p>
             </div>
           </Window>
