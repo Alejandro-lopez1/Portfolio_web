@@ -1,4 +1,3 @@
-import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   ArrowUpRight,
@@ -14,7 +13,7 @@ import {
 } from 'lucide-react'
 import Section from './ui/Section'
 import Badge from './ui/Badge'
-import ContactForm from './ui/ContactForm'
+import PixelButton from './ui/PixelButton'
 import Window from './ui/Window'
 
 const services = [
@@ -128,15 +127,7 @@ const steps = [
   },
 ]
 
-export default function Services() {
-  const [selectedService, setSelectedService] = useState('')
-  const formRef = useRef(null)
-
-  const requestQuote = (service) => {
-    setSelectedService(service)
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
-
+export default function Services({ onRequestQuote }) {
   return (
     <Section
       id="services"
@@ -198,7 +189,7 @@ export default function Services() {
                 </span>
                 <button
                   type="button"
-                  onClick={() => requestQuote(service.title)}
+                  onClick={() => onRequestQuote?.(service.title)}
                   className="inline-flex items-center gap-1 text-[11px] font-pixel font-medium text-brand-400 hover:text-brand-300 transition-colors"
                 >
                   Cotizar
@@ -258,7 +249,7 @@ export default function Services() {
           aria-hidden="true"
         />
 
-        <div className="relative grid lg:grid-cols-[1fr_1.1fr] items-start gap-6">
+        <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-5">
           <div>
             <p className="font-pixel text-[10px] uppercase tracking-[0.2em] text-brand-400 mb-2">
               Proyecto en mente
@@ -272,17 +263,16 @@ export default function Services() {
             </p>
           </div>
 
-          <div
-            ref={formRef}
-            id="cotizacion"
-            className="scroll-mt-24 rounded-mac border border-retro-border bg-retro-bg/70 p-4 sm:p-5"
+          <PixelButton
+            type="button"
+            variant="primary"
+            size="md"
+            onClick={() => onRequestQuote?.()}
+            className="shrink-0"
           >
-            <ContactForm
-              defaultService={selectedService}
-              source="Servicios"
-              submitLabel="Solicitar cotizacion"
-            />
-          </div>
+            Solicitar cotizacion
+            <ArrowUpRight size={14} aria-hidden="true" />
+          </PixelButton>
         </div>
       </motion.div>
     </Section>

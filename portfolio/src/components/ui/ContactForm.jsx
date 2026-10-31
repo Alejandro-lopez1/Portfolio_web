@@ -31,6 +31,7 @@ const labelClass =
 
 export default function ContactForm({
   defaultService = '',
+  requestKey = 0,
   source = 'Portfolio',
   submitLabel = 'Enviar mensaje',
 }) {
@@ -46,7 +47,7 @@ export default function ContactForm({
     setForm((current) => ({ ...current, service: defaultService }))
     setStatus('idle')
     setError('')
-  }, [defaultService])
+  }, [defaultService, requestKey])
 
   const updateField = (event) => {
     const { name, value } = event.target

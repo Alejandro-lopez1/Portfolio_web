@@ -19,7 +19,7 @@ const contacts = [
   },
 ]
 
-export default function Contact() {
+export default function Contact({ quoteRequest = { service: '', id: 0 } }) {
   return (
     <Section
       id="contact"
@@ -100,11 +100,18 @@ export default function Contact() {
           </div>
         </Window>
 
-        <Window title="contacto.form">
-          <div className="p-5 sm:p-6">
-            <ContactForm source="Contacto" submitLabel="Enviar mensaje" />
-          </div>
-        </Window>
+        <div id="contact-form" className="scroll-mt-24">
+          <Window title="contacto.form">
+            <div className="p-5 sm:p-6">
+              <ContactForm
+                defaultService={quoteRequest.service}
+                requestKey={quoteRequest.id}
+                source="Contacto"
+                submitLabel="Enviar mensaje"
+              />
+            </div>
+          </Window>
+        </div>
       </div>
 
       <div className="max-w-5xl mx-auto mt-16 pt-6 border-t border-retro-border">
