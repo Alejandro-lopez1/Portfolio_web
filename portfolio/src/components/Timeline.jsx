@@ -5,31 +5,31 @@ import Section from './ui/Section'
 const timelineData = [
   {
     year: '2025 - Actualidad',
-    title: 'Estudiante de Analisis de Sistemas',
+    title: 'Estudiante de Análisis de Sistemas',
     company: 'Universidad',
     description:
-      'Formacion en analisis de sistemas, bases de datos, ingenieria de software y metodologias agiles.',
+      'Formación en análisis de sistemas, bases de datos, ingeniería de software y metodologías ágiles.',
   },
   {
     year: '2022 - Actualidad',
     title: 'Desarrollador Fullstack',
     company: 'Proyectos personales',
     description:
-      'Desarrollo de MotoFix (PWA) y Backoffice Academico. Stack: React, Django REST, PostgreSQL, Docker.',
+      'Desarrollo de MotoFix (PWA) y Backoffice Académico. Stack: React, Django REST, PostgreSQL, Docker.',
   },
   {
     year: '2024 - Actualidad',
     title: 'Analista de Datos',
-    company: 'Proyectos y formacion',
+    company: 'Proyectos y formación',
     description:
-      'Trabajo con Python, SQL, Pandas, NumPy y herramientas de visualizacion para toma de decisiones.',
+      'Trabajo con Python, SQL, Pandas, NumPy y herramientas de visualización para toma de decisiones.',
   },
   {
     year: '2024 - Actualidad',
     title: 'Emprendedor',
     company: 'Negocios propios',
     description:
-      'Gestion de hamburgueseria y taller de motos. Inventario, proveedores, atencion al cliente y operaciones.',
+      'Gestión de hamburguesería y taller de motos. Inventario, proveedores, atención al cliente y operaciones.',
   },
 ]
 
@@ -38,7 +38,7 @@ export default function TimelineSection() {
     <Section
       id="timeline"
       title="Trayectoria"
-      subtitle="Mi evolucion profesional y tecnica"
+      subtitle="Mi evolución profesional y técnica"
     >
       <Window title="career_history.log">
         <div className="p-5 sm:p-8">

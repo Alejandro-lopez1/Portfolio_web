@@ -139,7 +139,7 @@ const categories = [
   {
     id: 'analysis',
     icon: 'chart',
-    label: 'Analisis',
+    label: 'Análisis',
     color: 'brand',
     items: ['Trello', 'Jira', 'Obsidian', 'Draw.io', 'Lucidchart', 'Miro', 'Notion'],
   },
@@ -171,7 +171,7 @@ export default function Skills() {
     <Section
       id="skills"
       title="Skills"
-      subtitle="Tecnologias y herramientas con las que trabajo dia a dia"
+      subtitle="Tecnologías y herramientas con las que trabajo día a día"
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {categories.map((cat, i) => (

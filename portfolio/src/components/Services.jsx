@@ -23,17 +23,17 @@ const services = [
     tag: 'Web',
     color: 'brand',
     description:
-      'Sitios rapidos, responsive y pensados para convertir visitas en consultas reales.',
+      'Sitios rápidos, responsive y pensados para convertir visitas en consultas reales.',
     features: [
-      'Diseno responsive',
-      'SEO tecnico',
+      'Diseño responsive',
+      'SEO técnico',
       'Formularios y WhatsApp',
       'Deploy incluido',
     ],
   },
   {
     icon: LayoutDashboard,
-    title: 'Sistemas de gestion a medida',
+    title: 'Sistemas de gestión a medida',
     tag: 'Software',
     color: 'mint',
     description:
@@ -48,29 +48,29 @@ const services = [
   },
   {
     icon: BarChart3,
-    title: 'Dashboards y analisis de datos',
+    title: 'Dashboards y análisis de datos',
     tag: 'Data',
     color: 'deep',
     description:
-      'Convierto tus datos en tableros claros para decidir con informacion y no con intuicion.',
+      'Convierto tus datos en tableros claros para decidir con información y no con intuición.',
     features: [
       'KPIs en tiempo real',
       'Limpieza de datos',
-      'Reportes automaticos',
+      'Reportes automáticos',
       'Visualizaciones claras',
     ],
   },
   {
     icon: Workflow,
-    title: 'Automatizacion de procesos',
-    tag: 'Automatizacion',
+    title: 'Automatización de procesos',
+    tag: 'Automatización',
     color: 'outline',
     description:
       'Elimino tareas repetitivas conectando planillas, APIs y las herramientas que ya usas.',
     features: [
-      'Integracion de APIs',
+      'Integración de APIs',
       'Scripts a medida',
-      'Alertas automaticas',
+      'Alertas automáticas',
       'Ahorro de horas de trabajo',
     ],
   },
@@ -80,26 +80,26 @@ const services = [
     tag: 'Backend',
     color: 'brand',
     description:
-      'Construyo la base tecnica de tu producto: APIs seguras, bases de datos y logica de negocio.',
+      'Construyo la base técnica de tu producto: APIs seguras, bases de datos y lógica de negocio.',
     features: [
       'Django / FastAPI',
       'PostgreSQL / MySQL',
-      'Autenticacion',
-      'Documentacion tecnica',
+      'Autenticación',
+      'Documentación técnica',
     ],
   },
   {
     icon: Lightbulb,
-    title: 'Consultoria y analisis funcional',
-    tag: 'Consultoria',
+    title: 'Consultoría y análisis funcional',
+    tag: 'Consultoría',
     color: 'mint',
     description:
-      'Revisamos tu idea o proceso y definimos el alcance tecnico antes de escribir una linea de codigo.',
+      'Revisamos tu idea o proceso y definimos el alcance técnico antes de escribir una línea de código.',
     features: [
       'Relevamiento de procesos',
-      'Documentacion funcional',
-      'Priorizacion de alcance',
-      'Acompanamiento',
+      'Documentación funcional',
+      'Priorización de alcance',
+      'Acompañamiento',
     ],
   },
 ]
@@ -123,7 +123,7 @@ const steps = [
   {
     number: '04',
     title: 'Entrega',
-    description: 'Deploy, capacitacion y soporte post-lanzamiento.',
+    description: 'Deploy, capacitación y soporte post-lanzamiento.',
   },
 ]
 
@@ -132,7 +132,7 @@ export default function Services({ onRequestQuote }) {
     <Section
       id="services"
       title="Servicios"
-      subtitle="Productos digitales para que tu negocio venda mas, ahorre tiempo y tome mejores decisiones."
+      subtitle="Productos digitales para que tu negocio venda más, ahorre tiempo y tome mejores decisiones."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {services.map((service, i) => {
@@ -149,7 +149,7 @@ export default function Services({ onRequestQuote }) {
             >
               {service.popular && (
                 <span className="absolute top-0 right-4 -translate-y-1/2 px-2.5 py-1 text-[9px] font-pixel font-bold uppercase tracking-wider bg-brand-500 text-retro-bg rounded-mac">
-                  Mas pedido
+                  Más pedido
                 </span>
               )}
 
@@ -207,7 +207,7 @@ export default function Services({ onRequestQuote }) {
             <div className="flex items-center gap-2 mb-6 text-brand-400">
               <Sparkles size={14} aria-hidden="true" />
               <span className="font-pixel text-[11px] uppercase tracking-[0.2em]">
-                Como trabajo
+                Cómo trabajo
               </span>
             </div>
 
@@ -255,7 +255,7 @@ export default function Services({ onRequestQuote }) {
               Proyecto en mente
             </p>
             <h3 className="text-xl sm:text-2xl font-bold text-retro-text font-pixel">
-              Contame que necesitas y armamos una propuesta.
+              Contame qué necesitas y armamos una propuesta.
             </h3>
             <p className="flex items-center gap-2 text-xs text-retro-muted mt-2">
               <Clock size={13} aria-hidden="true" />
@@ -270,7 +270,7 @@ export default function Services({ onRequestQuote }) {
             onClick={() => onRequestQuote?.()}
             className="shrink-0"
           >
-            Solicitar cotizacion
+            Solicitar cotización
             <ArrowUpRight size={14} aria-hidden="true" />
           </PixelButton>
         </div>

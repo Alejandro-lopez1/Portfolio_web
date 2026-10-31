@@ -13,13 +13,13 @@ const highlights = [
     icon: '📊',
     title: 'Analista de Datos',
     description:
-      'Python, SQL, visualizacion — convierto datos en decisiones.',
+      'Python, SQL, visualización — convierto datos en decisiones.',
   },
   {
     icon: '💡',
     title: 'Emprendedor',
     description:
-      'Negocios reales: hamburgueseria, taller de motos. Se lo que cuesta hacer que algo funcione.',
+      'Negocios reales: hamburguesería, taller de motos. Sé lo que cuesta hacer que algo funcione.',
   },
 ]
 
@@ -27,7 +27,7 @@ export default function About() {
   return (
     <Section
       id="about"
-      title="Sobre mi"
+      title="Sobre mí"
       subtitle="No vengo solo de la academia. He construido negocios desde cero, atendido clientes, y aprendido que el software vale cuando resuelve problemas reales."
     >
       <div className="grid md:grid-cols-2 gap-8 items-start">

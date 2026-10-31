@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'MotoFix',
     description:
-      'PWA de gestion integral para talleres mecanicos. Incluye control de inventario, ordenes de reparacion, historial de clientes y notificaciones. Arquitectura modular con frontend en React/Vite y backend en Django REST Framework con PostgreSQL.',
+      'PWA de gestión integral para talleres mecánicos. Incluye control de inventario, órdenes de reparación, historial de clientes y notificaciones. Arquitectura modular con frontend en React/Vite y backend en Django REST Framework con PostgreSQL.',
     stack: ['React', 'Vite', 'PWA', 'Django REST', 'PostgreSQL', 'Docker', 'Nginx'],
     github: 'https://github.com/Alejandro-lopez1/MotoFix',
     demo: 'https://motofix-frontend.onrender.com',
@@ -16,9 +16,9 @@ const projects = [
     featured: true,
   },
   {
-    title: 'Backoffice Academico',
+    title: 'Backoffice Académico',
     description:
-      'Sistema de gestion universitaria desarrollado en Java con Spring Boot. Proyecto grupal que implementa CRUD de estudiantes, cursos, inscripciones y generacion de reportes academicos con autenticacion por roles.',
+      'Sistema de gestión universitaria desarrollado en Java con Spring Boot. Proyecto grupal que implementa CRUD de estudiantes, cursos, inscripciones y generación de reportes académicos con autenticación por roles.',
     stack: ['Java', 'Spring Boot', 'MySQL', 'Maven'],
     github: 'https://github.com/Alejandro-lopez1/Backoffice',
     demo: null,
@@ -44,7 +44,7 @@ export default function Projects() {
     <Section
       id="projects"
       title="Proyectos"
-      subtitle="Proyectos reales que reflejan mi experiencia tecnica y capacidad de ejecucion"
+      subtitle="Proyectos reales que reflejan mi experiencia técnica y capacidad de ejecución"
     >
       <motion.div
         variants={containerVariants}

@@ -8,11 +8,11 @@ const FORM_ENDPOINT =
 const serviceOptions = [
   'Consulta general',
   'Sitios web y landing pages',
-  'Sistemas de gestion a medida',
-  'Dashboards y analisis de datos',
-  'Automatizacion de procesos',
+  'Sistemas de gestión a medida',
+  'Dashboards y análisis de datos',
+  'Automatización de procesos',
   'APIs y backends',
-  'Consultoria y analisis funcional',
+  'Consultoría y análisis funcional',
   'Otro',
 ]
 
@@ -168,7 +168,7 @@ export default function ContactForm({
 
       <div>
         <label htmlFor={`${prefix}-service`} className={labelClass}>
-          Servicio de interes
+          Servicio de interés
         </label>
         <select
           id={`${prefix}-service`}
@@ -196,7 +196,7 @@ export default function ContactForm({
           onChange={updateField}
           required
           rows={4}
-          placeholder="Contame que necesitas..."
+          placeholder="Contame qué necesitas..."
           className={`${inputClass} resize-none`}
         />
       </div>
@@ -240,7 +240,7 @@ export default function ContactForm({
       </PixelButton>
 
       <p className="text-[10px] text-retro-muted text-center leading-relaxed">
-        El mensaje se envia sin salir de esta pagina.
+        El mensaje se envía sin salir de esta página.
       </p>
     </form>
   )

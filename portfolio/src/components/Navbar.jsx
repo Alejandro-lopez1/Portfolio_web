@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
   { href: '#hero', label: 'Inicio' },
-  { href: '#about', label: 'Sobre mi' },
+  { href: '#about', label: 'Sobre mí' },
   { href: '#services', label: 'Servicios' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Proyectos' },
@@ -29,7 +29,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
       role="navigation"
-      aria-label="Navegacion principal"
+      aria-label="Navegación principal"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14">
@@ -59,7 +59,7 @@ export default function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden w-8 h-8 flex flex-col items-center justify-center gap-1 rounded-mac hover:bg-retro-border-light/50 transition-colors"
-            aria-label={open ? 'Cerrar menu' : 'Abrir menu'}
+            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={open}
           >
             <span

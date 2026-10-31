@@ -1,6 +1,6 @@
-# Portfolio — Alejandro Lopez
+# Portafolio — Alejandro Lopez
 
-Portfolio web profesional. Desarrollado con React + Vite + Tailwind CSS.
+Portafolio web profesional. Desarrollado con React + Vite + Tailwind CSS.
 
 ```bash
 npm install
