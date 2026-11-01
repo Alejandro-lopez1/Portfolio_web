@@ -16,6 +16,16 @@ const projects = [
     featured: true,
   },
   {
+    title: 'Navaja',
+    description:
+      'Sistema mobile-first para administrar la agenda, caja y comisiones de una barbería. Permite gestionar turnos y descuentos, registrar el medio de pago utilizado y consultar reportes. No procesa pagos.',
+    stack: ['Next.js 15', 'React 19', 'TypeScript','Tailwind CSS', 'Google Sheets API v4', 'Zod'],
+    github: 'https://github.com/Alejandro-lopez1/navaja-barberia',
+    demo: 'https://barberia-sandy-six.vercel.app/',
+    icon: '💈',
+    featured: true,
+  },
+  {
     title: 'Backoffice Académico',
     description:
       'Sistema de gestión universitaria desarrollado en Java con Spring Boot. Proyecto grupal que implementa CRUD de estudiantes, cursos, inscripciones y generación de reportes académicos con autenticación por roles.',
